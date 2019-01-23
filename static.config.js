@@ -11,7 +11,7 @@ export default {
         )
         return [
             {
-                path: '.',
+                path: '/',
                 getData: () => ({
                     posts,
                 }),
