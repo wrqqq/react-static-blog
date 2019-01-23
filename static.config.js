@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
     getSiteData: () => ({
-        title: 'React Static',
+        title: 'blog',
     }),
     getRoutes: async () => {
         const { data: posts } = await axios.get(
@@ -11,13 +11,13 @@ export default {
         )
         return [
             {
-                path: '/blog',
+                path: '.',
                 getData: () => ({
                     posts,
                 }),
                 children: posts.map(post => ({
                     path: `/post/${post.id}`,
-                    component: 'src/containers/Post',
+                    component: 'src/components/post/post.js',
                     getData: () => ({
                         post,
                     }),
