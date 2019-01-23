@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Root, Routes } from 'react-static'
+import { Link } from '@reach/router'
 
-//
 import './app.css'
-import logo from './logo.png'
 
-class App extends Component {
-  render() {
+function App() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React-Static</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <Root>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/blog">Blog</Link>
+            </nav>
+            <div className="content">
+                <Routes />
+            </div>
+        </Root>
     )
-  }
 }
 
 export default App
