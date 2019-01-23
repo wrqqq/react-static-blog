@@ -20,6 +20,6 @@ export default withSiteData(() => (
     <Container>
         <Header />
         <Categories />
-        <PostsContainer/>
+        <PostsContainer />
     </Container>
 ))

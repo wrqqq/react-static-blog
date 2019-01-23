@@ -1,4 +1,4 @@
-function redirect() {
+const redirect = () => {
     if (typeof window !== 'undefined') {
         // browser-only code
         if (window.netlifyIdentity) {
