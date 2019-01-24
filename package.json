@@ -21,7 +21,9 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.0",
-    "eslint-config-react-tools": "1.x.x",
+    "eslint-config-react-tools": "^1.2.5",
+    "react-markdown": "^4.0.6",
+    "react-moment": "^0.8.4",
     "serve": "^10.1.1"
   }
 }
