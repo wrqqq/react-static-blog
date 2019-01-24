@@ -1,8 +1,9 @@
 import React from 'react'
-import { withSiteData } from 'react-static'
+import { withRouteData } from 'react-static'
+import styled from 'styled-components'
+import { Link } from '@reach/router'
 import Header from '../components/header/header.js'
 import Categories from '../components/categories/categories.js'
-import styled from 'styled-components'
 
 const Container = styled.main`
     width: 90%;
@@ -16,10 +17,20 @@ const PostsContainer = styled.div`
     width: 90%;
 `
 
-export default withSiteData(() => (
+
+
+export default withRouteData(({posts}) => (
     <Container>
         <Header />
         <Categories />
-        <PostsContainer />
+        <PostsContainer>
+            <ul>
+                {posts.map(post => (
+                    <li key={post.data.slug}>
+                        <Link to={`/post/${post.data.slug}`}>{post.data.title}</Link>
+                    </li>
+                ))}
+            </ul>
+        </PostsContainer>
     </Container>
 ))
