@@ -53,13 +53,13 @@ export default {
     return [
       {
         path: '/',
-        component: 'src/pages/index.js',
+        component: 'src/components/container/container',
         getData: () => ({
           posts,
         }),
         children: posts.map(post => ({
           path: `/post/${post.data.slug}`,
-          component: 'src/components/post/post.js',
+          component: 'src/components/post/post',
           getData: () => ({
             post,
           }),
