@@ -6,7 +6,7 @@ media_folder: "public/uploads" # Media files will be stored in the repo under pu
 public_folder: "/uploads" # Folder path where uploaded files will be accessed, relative to the base of the built site
 
 collections:
-- name: "posts" # Used in routes, e.g., /admin/collections/blog
+- name: "frontend" # Used in routes, e.g., /admin/collections/blog
   label: "Frontend" # Used in the UI
   filter: {field: "category", value: "frontend"}
   folder: "public/posts" # The path to the folder where the documents are stored
@@ -18,7 +18,7 @@ collections:
   - {label: "Publish Date", name: "date", widget: "datetime"}
   - {label: "Featured Image", name: "thumbnail", widget: "image"}
   - {label: "Body", name: "body", widget: "markdown"}
-- name: "posts" # Used in routes, e.g., /admin/collections/blog
+- name: "other" # Used in routes, e.g., /admin/collections/blog
   label: "Other" # Used in the UI
   filter: {field: "category", value: "other"}
   folder: "public/posts" # The path to the folder where the documents are stored
