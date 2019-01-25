@@ -1,17 +1,20 @@
 import React from 'react'
-import { Root, Routes } from 'react-static'
-import { hot } from 'react-hot-loader'
+import { Root, Routes, Route } from 'react-static'
+import { Link, Location } from '@reach/router'
+import { Transition, animated } from 'react-spring'
 
-import './app.css'
 
-function App () {
-    return (
-        <Root>
-            <div className="content">
-                <Routes />
-            </div>
-        </Root>
-    )
-}
+const App = () => (
+    <Root>
+        <Routes>
+            {({ getComponentForPath }) => {
+                // The pathname is used to retrieve the component for that path
+                let Comp = getComponentForPath(window.location.href)
+                // The component is rendered!
+                return <Comp />
+            }}
+        </Routes>
+    </Root>
+)
 
-export default hot(module)(App)
+export default App

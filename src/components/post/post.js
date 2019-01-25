@@ -4,6 +4,7 @@ import { Link } from '@reach/router'
 
 export default withRouteData(({ post }) => (
   <div>
+      {console.log(post)}
     <Link to="/">{'<'} Back</Link>
     <br />
     <h3>{post.data.title}</h3>

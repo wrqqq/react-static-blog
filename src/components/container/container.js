@@ -21,16 +21,16 @@ const PostsContainer = styled.ul`
 `
 
 
-export default withRouteData(({posts}) => (
-    <Container>
-        <Header />
-        <Categories />
-        <PostsContainer>
-            {posts.map(post => (
-                <li key={post.data.slug}>
-                    <Link to={`/post/${post.data.slug}`}>{post.data.title}</Link>
-                </li>
+export default withRouteData(({ posts }) => (
+  <Container>
+    <Header />
+    <Categories />
+    <PostsContainer>
+      {posts.map(post => (
+        <li key={post.data.slug}>
+          <Link to={`/posts/${post.data.slug}`}>{post.data.title}</Link>
+        </li>
             ))}
-        </PostsContainer>
-    </Container>
+    </PostsContainer>
+  </Container>
 ))
